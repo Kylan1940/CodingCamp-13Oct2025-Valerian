@@ -14,35 +14,39 @@
 
     <!-- Main Content -->
     <main>
-        <section class="todo-app">
-            <input type="text" id="new-task" placeholder="Add a new task...">
-            <input type="date" id="due-date" placeholder="Select due date...">
-            <button onclick="addTask()">Add Task</button>
-        </section>
+        <div class="border">
+            <section class="todo-app">
+                <input type="text" id="new-task" placeholder="Add a new task...">
+                <input type="date" id="due-date" placeholder="Select due date...">
+                <button onclick="addTask()">Add Task</button>
+            </section>
 
-        <section>
-            <button onclick="filterTasks()">Filter</button>
-            <button onclick="clearTask()">Delete</button>
-        </section>
+            <section>
+                <button onclick="filterTasks()">Filter</button>
+                <button onclick="clearTask()">Delete</button>
+            </section>
 
-        <section>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Task Description</th>
-                        <th>Due Date</th>
-                    </tr>
-                </thead>
-                <tbody id="task-list">
-                    <tr><td colspan="2">No tasks available</td></tr>
-                </tbody>
-            </table>
-        </section>
+            <section>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Task Description</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <tr><td colspan="2">No tasks available</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
     </main>
     
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mini Project RevoU</p>
+        <div class="container">
+            <p>&copy; 2025 Valerian Kevin Casendra</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
