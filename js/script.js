@@ -24,15 +24,22 @@ function displayTasks() {
     taskList.innerHTML = "";
 
     tasks.forEach((task, index) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${task.description} - Due: ${task.dueDate}`;
-        taskList.appendChild(listItem);
+        const row = document.createElement("tr");
+        const descriptionCell = document.createElement("td");
+        const dueDateCell = document.createElement("td");
+
+        descriptionCell.textContent = task.description;
+        dueDateCell.textContent = task.dueDate;
+
+        row.appendChild(descriptionCell);
+        row.appendChild(dueDateCell);
+        taskList.appendChild(row);
     });
 }
 
 function clearTask() {
     const taskList = document.getElementById("task-list");
-    taskList.innerHTML = "No tasks available";    
+    taskList.innerHTML = "<tr><td colspan='2'>No tasks available</td></tr>";
 }
 
 function filterTasks() {
@@ -42,8 +49,15 @@ function filterTasks() {
     tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
 
     tasks.forEach((task, index) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${task.description} - Due: ${task.dueDate}`;
-        taskList.appendChild(listItem);
+        const row = document.createElement("tr");
+        const descriptionCell = document.createElement("td");
+        const dueDateCell = document.createElement("td");
+
+        descriptionCell.textContent = task.description;
+        dueDateCell.textContent = task.dueDate;
+
+        row.appendChild(descriptionCell);
+        row.appendChild(dueDateCell);
+        taskList.appendChild(row);
     });
 }
