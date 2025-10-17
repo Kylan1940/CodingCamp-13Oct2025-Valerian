@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project RevoU - To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>To Do List</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="todo-app">
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <input type="date" id="due-date" placeholder="Select due date...">
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section>
+            <button onclick="filterTasks()">Filter</button>
+            <button onclick="clearTask()">Delete</button>
+        </section>
+
+        <section>
+            <ul>List of Tasks:
+                <li id="task-list">No tasks available</li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mini Project RevoU</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
